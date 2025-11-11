@@ -26,6 +26,22 @@ body {
     -moz-osx-font-smoothing: grayscale;
 }
 
+/* Link styling in content areas */
+.about-content a,
+.publication-item a,
+.patent-item a {
+    color: var(--primary-color);
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    transition: all 0.2s ease;
+}
+
+.about-content a:hover,
+.publication-item a:hover,
+.patent-item a:hover {
+    border-bottom-color: var(--primary-color);
+}
+
 .container {
     max-width: 1200px;
     margin: 0 auto;
@@ -40,6 +56,8 @@ body {
     top: 0;
     z-index: 100;
     box-shadow: var(--shadow);
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.95);
 }
 
 .navbar .container {
@@ -94,6 +112,11 @@ body {
     border-radius: 50%;
     object-fit: cover;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.profile-photo:hover {
+    transform: scale(1.02);
 }
 
 .hero-content {
@@ -101,11 +124,12 @@ body {
 }
 
 .hero-content h1 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
     font-size: 3rem;
     font-weight: 800;
     color: var(--text-dark);
     margin-bottom: 0.5rem;
-    letter-spacing: -0.02em;
+    letter-spacing: -0.025em;
     line-height: 1.1;
 }
 
@@ -130,6 +154,10 @@ body {
 .about-details {
     padding: 4rem 0;
     background-color: var(--bg-white);
+}
+
+.about-details .container {
+    max-width: 1000px;
 }
 
 .about-content {
@@ -175,14 +203,15 @@ body {
 
 /* Profiles Section */
 .profiles {
-    padding: 4rem 0;
+    padding: 5rem 0;
     background-color: var(--bg-light);
+    border-top: 1px solid var(--border-color);
 }
 
 .profiles h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     text-align: center;
     color: var(--text-dark);
 }
@@ -274,7 +303,7 @@ body {
 
 /* Page Header */
 .page-header {
-    padding: 4rem 0 2rem;
+    padding: 4rem 0 3rem;
     background: linear-gradient(135deg, var(--bg-light) 0%, var(--bg-white) 100%);
     border-bottom: 1px solid var(--border-color);
 }
@@ -305,6 +334,10 @@ body {
 .content-section {
     padding: 4rem 0;
     min-height: 60vh;
+}
+
+.content-section .container {
+    max-width: 1000px;
 }
 
 /* PDF Viewer */
@@ -340,15 +373,15 @@ body {
 .publication-list {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .year-divider {
-    font-size: 2rem;
+    font-size: 1.75rem;
     font-weight: 700;
     color: var(--text-dark);
-    margin-top: 2.5rem;
-    margin-bottom: 2rem;
+    margin-top: 3.5rem;
+    margin-bottom: 1.75rem;
     padding-left: 1.25rem;
     border-left: 4px solid var(--primary-color);
     letter-spacing: -0.015em;
@@ -365,11 +398,14 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
     transition: all 0.3s ease;
+    border-left: 3px solid transparent;
 }
 
 .publication-item:hover {
     box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
+    border-color: var(--border-color);
+    border-left-color: var(--primary-color);
+    transform: translateX(4px);
 }
 
 .publication-title {
@@ -422,7 +458,7 @@ body {
 .patent-list {
     display: flex;
     flex-direction: column;
-    gap: 2.5rem;
+    gap: 2rem;
 }
 
 .patent-item {
@@ -431,11 +467,14 @@ body {
     border: 1px solid var(--border-color);
     border-radius: 0.75rem;
     transition: all 0.3s ease;
+    border-left: 3px solid transparent;
 }
 
 .patent-item:hover {
     box-shadow: var(--shadow-lg);
-    border-color: var(--primary-color);
+    border-color: var(--border-color);
+    border-left-color: var(--primary-color);
+    transform: translateX(4px);
 }
 
 .patent-title {
@@ -500,13 +539,15 @@ body {
 footer {
     background-color: var(--text-dark);
     color: white;
-    padding: 2rem 0;
+    padding: 2.5rem 0;
     text-align: center;
-    margin-top: 4rem;
+    margin-top: 6rem;
+    border-top: 3px solid var(--primary-color);
 }
 
 footer p {
-    color: rgba(255, 255, 255, 0.8);
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.95rem;
 }
 
 /* Responsive Design */
