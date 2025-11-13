@@ -452,14 +452,13 @@ body {
     padding: 1.5rem;
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
-    border-left: 3px solid transparent;
 }
 
 .publication-item:hover {
     box-shadow: var(--shadow-lg);
-    border-color: var(--border-color);
     border-left-color: var(--primary-color);
     transform: translateX(4px);
 }
@@ -521,14 +520,13 @@ body {
     padding: 1.5rem;
     background-color: var(--bg-white);
     border: 1px solid var(--border-color);
+    border-left: 3px solid var(--border-color);
     border-radius: 0.5rem;
     transition: all 0.3s ease;
-    border-left: 3px solid transparent;
 }
 
 .patent-item:hover {
     box-shadow: var(--shadow-lg);
-    border-color: var(--border-color);
     border-left-color: var(--primary-color);
     transform: translateX(4px);
 }
